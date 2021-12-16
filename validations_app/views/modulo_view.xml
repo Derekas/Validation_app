@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+
+<record model="ir.ui.view" id="validations_app.modulo_model_list">
+      <field name="name">List of modules</field>
+      <field name="model">validations_app.modulo_model</field>
+      <field name="arch" type="xml">
+     
+        <tree>
+          <field name="name"/>
+          <field name="descripcion"/>
+          <field name="horas"/>
+          <field name="ciclo"/>
+          
+        </tree>
+      </field>
+    </record>
+
+  <record model="ir.ui.view" id="validations_app.modulo_model_form">
+      <field name="name">Module form</field>
+      <field name="model">validations_app.modulo_model</field>
+      <field name="arch" type="xml">
+        <form string="Nuevo modulo">
+        
+         <sheet>
+
+              <field name="name"/>
+              <field name="descripcion"/>
+              <field name="horas"/>
+              <field name="ciclo"/>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="validations_app.action_window_modulo">
+      <field name="name">Listado de modulos</field>
+      <field name="res_model">validations_app.modulo_model</field>
+      <field name="view_mode">tree,form</field>
+     
+    </record>
+
+    <!-- server action to the one above -->
+
+  </data>
+</odoo>

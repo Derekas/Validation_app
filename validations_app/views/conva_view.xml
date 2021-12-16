@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="validations_app.conva_model_list">
+      <field name="name">List of validations</field>
+      <field name="model">validations_app.conva_model</field>
+      <field name="arch" type="xml">
+
+        <tree>
+          <field name="fecha"/>
+          <field name="modulo_id"/>
+          <field name="alumno_id"/>
+
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="validations_app.conva_model_form">
+      <field name="name">Validation form</field>
+      <field name="model">validations_app.conva_model</field>
+      <field name="arch" type="xml">
+
+        <form >
+          <sheet>
+            <group >
+              <field name="fecha"/>
+              <field name="modulo_id"/>
+              <field name="alumno_id"/>
+            </group>
+
+
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="validations_app.action_window_conva">
+      <field name="name">Listado de convalidaciones</field>
+      <field name="res_model">validations_app.conva_model</field>
+      <field name="view_mode">tree,form</field>
+
+    </record>
+
+  </data>
+</odoo>

@@ -1,0 +1,31 @@
+<odoo>
+  <data>
+    
+    <!-- Top menu item -->
+
+    <menuitem name="Validations App" id="validations_app.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Student" id="validations_app.menu_alumnos" parent="validations_app.menu_root"/>
+    <menuitem name="Model" id="validations_app.menu_modulo" parent="validations_app.menu_root"/>
+    <menuitem name="Convalidations" id="validations_app.menu_conva" parent="validations_app.menu_root"/>
+    <menuitem name="Cicle" id="validations_app.menu_ciclo" parent="validations_app.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="Students" id="task_app.menu_alumnos_list" parent="validations_app.menu_alumnos"
+              action="validations_app.action_window_alumnos"/>
+              
+    <menuitem name="Model" id="task_app.menu_modulo_list" parent="validations_app.menu_modulo"
+              action="validations_app.action_window_modulo"/>
+
+    <menuitem name="Convalidations" id="task_app.menu_conva_list" parent="validations_app.menu_conva"
+              action="validations_app.action_window_conva"/>
+
+    <menuitem name="Cicle" id="task_app.menu_ciclo_list" parent="validations_app.menu_ciclo"
+              action="validations_app.action_window_ciclo"/>
+
+
+  </data>
+</odoo>
