@@ -8,8 +8,8 @@ class cicloModel(models.Model):
     _description = 'Ciclos Model'
 
 
-    name =fields.Char("Cycle Code",required=True)
-    descripcion=fields.Html("Description",required=True)
+    name =fields.Char("Cycle Code",required=True,size=10,help="Name of Cycle")
+    descripcion=fields.Html("Description",required=True,size=100,help="Input Description")
     
     modulos=fields.One2many("validations_app.modulo_model","ciclo","Modulos")
     

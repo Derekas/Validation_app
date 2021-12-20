@@ -7,15 +7,15 @@ class alumnosModel(models.Model):
     _name = 'validations_app.alumnos_model'
     _description = 'Alumnos Model'
 
-    name = fields.Char("Student Name",required=True)
-    password = fields.Char('Password', required=True)
-    foto = fields.Binary('Photo', required=True)
-    edad = fields.Integer('Age', required=True)
-    localidad = fields.Char('Location', required=True)
-    provincia = fields.Char('Province', required=True)
-    email = fields.Char('Email', required=True)
+    name = fields.Char(string="Student Name",required=True,index=True)
+    password = fields.Char(string='Password', required=True,size=10,help="Password Students")
+    foto = fields.Binary(string='Photo', required=True)
+    edad = fields.Integer(string='Age', required=True,index=True)
+    localidad = fields.Char(string='Location', required=True,help="Input Location",size=100)
+    provincia = fields.Char(string='Province', required=True,help="Input Province",size=100)
+    email = fields.Char(string='Email', required=True,size=100,help="Input Gmail")
 
-    convalidaciones=fields.One2many("validations_app.conva_model","alumno_id","Convalidaciones")
+    convalidaciones=fields.One2many("validations_app.conva_model","alumno_id",string="Convalidaciones")
     
     def generatePassword(self):
         self.password=""
